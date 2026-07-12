@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wave — Music Player</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+  <section class="now-playing raised">
+    <div class="np-top">
+      <button class="btn-circle" id="backBtn" title="Back" aria-label="Back">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      </button>
+      <h4>Playing Now</h4>
+      <button class="btn-circle" id="menuBtn" title="Menu" aria-label="Menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+
+    <div class="art-wrap raised" id="artWrap">
+      <img id="albumArt" src="" alt="Album art">
+    </div>
+
+    <h2 class="track-title" id="trackTitle">—</h2>
+    <p class="track-artist" id="trackArtist">—</p>
+
+    <div class="progress-row">
+      <span class="time" id="currentTime">0:00</span>
+      <div class="progress-track pressed" id="progressTrack">
+        <div class="progress-fill" id="progressFill"></div>
+        <div class="progress-thumb" id="progressThumb"></div>
+      </div>
+      <span class="time end" id="durationTime">0:00</span>
+    </div>
+
+    <div class="controls-row">
+      <button class="btn-circle btn-side" id="prevBtn" title="Previous" aria-label="Previous">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zM9.5 12l10-6v12z"/></svg>
+      </button>
+      <button class="btn-circle btn-play" id="playBtn" title="Play/Pause" aria-label="Play or Pause">
+        <svg id="playIcon" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      </button>
+      <button class="btn-circle btn-side" id="nextBtn" title="Next" aria-label="Next">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 6h2v12h-2zM4.5 6l10 6-10 6z"/></svg>
+      </button>
+    </div>
+
+    <div class="volume-row">
+      <button class="btn-circle" id="muteBtn" title="Mute/Unmute" aria-label="Mute or Unmute">
+        <svg id="volIcon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3 10v4h4l5 5V5L7 10H3z"/><path d="M16.5 12c0-1.6-.9-3-2.2-3.7v7.4c1.3-.7 2.2-2.1 2.2-3.7z"/></svg>
+      </button>
+      <div class="volume-track pressed" id="volumeTrack">
+        <div class="volume-fill" id="volumeFill"></div>
+        <div class="volume-thumb" id="volumeThumb"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="playlist-panel raised">
+    <div class="pl-header">
+      <button class="btn-circle" id="likeBtn" title="Like" aria-label="Like song">
+        <svg id="likeIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7.5-4.9-10-9.3C.6 8.3 2 4.8 5.4 4.1 7.7 3.6 9.9 4.7 12 7c2.1-2.3 4.3-3.4 6.6-2.9 3.4.7 4.8 4.2 3.4 7.6C19.5 16.1 12 21 12 21z"/></svg>
+      </button>
+      <div class="pl-art raised">
+        <img id="plArt" src="" alt="Playlist art">
+      </div>
+      <button class="btn-circle" id="moreBtn" title="More" aria-label="More options">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+      </button>
+    </div>
+
+    <p class="pl-title">Up Next</p>
+
+    <ul class="playlist" id="playlist"></ul>
+
+    <div class="pl-footer">
+      <button class="btn-circle on" id="shuffleBtn" title="Shuffle" aria-label="Toggle shuffle">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
+      </button>
+      <button class="btn-circle" id="heartFooterBtn" title="Favorites" aria-label="Favorites">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.9-10-9.3C.6 8.3 2 4.8 5.4 4.1 7.7 3.6 9.9 4.7 12 7c2.1-2.3 4.3-3.4 6.6-2.9 3.4.7 4.8 4.2 3.4 7.6C19.5 16.1 12 21 12 21z"/></svg>
+      </button>
+      <button class="btn-circle on" id="repeatBtn" title="Repeat / Autoplay" aria-label="Toggle repeat">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 1l4 4-4 4M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4M21 13v2a4 4 0 01-4 4H3"/></svg>
+      </button>
+    </div>
+  </section>
+
+</div>
+
+<audio id="audio" preload="metadata"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
