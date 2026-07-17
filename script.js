@@ -2,25 +2,25 @@ const songs = [
   {
     title: "Dil Nu",
     artist: "Ap Dhillon",
-    art: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&h=400&fit=crop",
+    art: "https://i.tribune.com.pk/media/images/sing11667379351-0/sing11667379351-0.jpg",
     src: "assets/songs/DilNu.mp3"
   },
   {
     title: "Kahani Suno",
     artist: "Kaifi Khalil",
-    art: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop",
+    art: "https://tse4.mm.bing.net/th/id/OIP.Wy8toh7TS_iIPW1Q_033_wHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
     src: "assets/songs/kahaniSuno.mp3"
   },
   {
     title: "Tera hone Lga Hon",
     artist: "Atif Aslam",
-    art: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&h=400&fit=crop",
+    art: "https://filmfare.wwmindia.com/content/2024/mar/atifaslam21709289369.jpg",
     src: "assets/songs/TeraHone.mp3"
   },
   {
     title: "Thodi Si Daru",
     artist: "Ap Dhillon",
-    art: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=400&h=400&fit=crop",
+    art: "https://tse4.mm.bing.net/th/id/OIP.TTthMkWvD2s7S4D7WAB9NAHaFY?r=0&w=620&h=450&rs=1&pid=ImgDetMain&o=7&rm=3",
     src: "assets/songs/ThodiSiDaaru.mp3"
   },
   {

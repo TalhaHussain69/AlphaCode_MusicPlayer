@@ -27,7 +27,7 @@
     padding:48px 24px;
   }
 
-  /* ===== Neumorphic helpers ===== */
+
   .raised{
     background: var(--panel);
     box-shadow: 9px 9px 18px var(--shadow-dark), -9px -9px 18px var(--shadow-light);
@@ -101,7 +101,14 @@
   .art-wrap.spin img{
     animation: rotate 14s linear infinite;
   }
-  @keyframes rotate{ from{transform:rotate(0)} to{transform:rotate(360deg)} }
+  @keyframes rotate{
+     from{
+      transform:rotate(0)
+  }
+   to {
+    transform:rotate(360deg)
+  } 
+}
 
   .track-title{
     font-family:'Playfair Display', serif;
