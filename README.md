@@ -77,7 +77,7 @@ Wave-Music-Player/
 ### Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/Wave-Music-Player.git
+git clone https://github.com/TalhaHussai69/Wave-Music-Player.git
 ```
 
 ### Open Project
@@ -142,7 +142,7 @@ It motivates me to build more awesome projects.
 
 <div align="center">
 
-### Made with ❤️ by Talha Hussain
+### Made with ❤️ by Muhammad Talha Hussain (Frontend Web Developer)
 
 **Happy Coding 🚀**
 
